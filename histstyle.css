@@ -1,0 +1,522 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 70px;
+    background-color: #5d4954;
+    font-family: sans-serif;
+
+}
+
+    
+
+.nav-links{
+    display: flex;
+    justify-content: space-around;
+    width: 80%;
+    color: rgb(236, 228, 228);
+    font-size: 14px;
+}
+.nav-links li{
+    list-style: none;
+}
+.nav-links a{
+    display: inline-block;
+    
+    color: rgb(224, 208, 208);
+    text-decoration: none;
+    letter-spacing: 3px;
+    font-weight: bold;
+    font-size: 14px;
+}
+.hover::after{
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background-color: white;
+    transition: width .3s;
+}
+.hover:hover::after{
+    width: 100%;
+    transition: width .3s;
+}
+
+.burger{
+    display: none;
+    cursor: pointer;
+}
+.burger div{
+    width: 25px;
+    height: 2px;
+    background-color: white;
+    margin: 5px;
+    transition: all 0.3s ease;
+
+}
+@media screen and (max-width:1024px){
+    .nav-links{
+       
+        width: 90%;
+    }
+        
+}
+@media screen and (max-width:760px){
+    body{
+        overflow-x: hidden;
+    }
+    .nav-links{
+        position: absolute;
+        right: 0px;
+        height: 92vh;
+        top: 8vh;
+        width: 50%;
+
+        background-color: #5d4954;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+    }
+    .nav-links li{
+        opacity: 1;
+        
+    }
+    .burger{
+        
+        display: block;
+    }
+}
+.nav-active{
+    transform: translateX(0%);
+
+}
+
+@keyframes navLinkFade{
+    from{
+        opacity: 1;
+        transform: translateX(50px);
+
+    }
+    to{
+        opacity: 0;
+        transform: translateX(0px);
+
+    }
+}
+.toggle .line1{
+    transform: rotate(-45deg) translate(-5px,6px);
+
+}
+.toggle .line2{
+    opacity: 0;
+    
+}
+.toggle .line3{
+    transform: rotate(45deg) translate(-5px,-6px);
+}
+img{
+    height: 40%;
+    width: 100%;
+}
+.nav1{
+    display: flex;
+    justify-content: space-around;
+    width: 80%;
+    color: rgb(236, 228, 228);
+    font-size: 14px;
+}
+.nav1 li{
+    list-style: none;
+
+}
+.nav1 a{
+    display: inline-block;
+    
+    color: rgb(224, 208, 208);
+    text-decoration: none;
+    letter-spacing: 3px;
+    font-weight: bold;
+    font-size: 14px;
+}
+.drop{
+    display: none;
+    position: absolute;
+    background-color: rgb(219, 200, 200);
+    min-width: 158px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+
+}
+.drop a{
+    color: black;
+    padding: 12px 16px;
+    display: block;
+    text-decoration: none;
+    font-weight: 500;
+}
+.drop a:hover{
+    background-color: white;
+    color: black;
+
+}
+.nav1:hover .drop{
+    display: block;
+}
+.nav1:hover .hover{
+    background-color: transparent;
+}
+.textonpic{
+    height: 50%;
+    width: 100%;
+    background: white;
+    color: #fff;
+   
+    
+    padding: 40px;
+   
+}
+.did{
+    background-image: url(s1.jpg);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+
+
+}
+.did{
+    position: absolute;
+    bottom: -70%;
+    right: 18%;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    -ms-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    background-size: cover;
+    white-space: nowrap;
+    background-position: 50% 50%;
+    background-repeat: repeat;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 50px;
+
+}
+
+.container{
+    width: 1280px;
+    margin: 70px auto 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.container .box{
+    position: relative;
+    width: 300px;
+    height: 300px;
+    background: white;
+    margin: 10px;
+    box-sizing: border-box;
+    display: inline-block;
+
+
+
+}
+.container .box .imgbox{
+    position: relative;
+    overflow: hidden;
+}
+.container .box .imgbox img{
+    max-width: 100%;
+    transition: transform 2s;
+}
+.container .box:hover .imgbox img{
+    transform: scale(1.2);
+
+}
+.container .box .details{
+    position:absolute;
+    top: 10px;
+    left: 10px;
+    left: 10px;
+    bottom: 10px;
+    right: 10px;
+    background: rgba(0, 0, 0, 0.8);
+    transform: scaleY(0);
+    transition: transform .5s;
+
+}
+.container .box:hover .details{
+    transform: scaleY(1);
+
+}
+.container .box .details .content{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    padding: 15px;
+    color: #fff;
+}
+.container .box .details .content h2{
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    color: #ff0;
+
+}
+.container .box .details .content p{
+    margin: 10px 0 0;
+    padding: 0;
+    
+
+}
+.h1{
+    background-image: url(mem.jpg);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+
+
+}
+.h1{
+    position: absolute;
+    bottom: -75%;
+    right: 12%;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    -ms-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    background-size: cover;
+    white-space: nowrap;
+    background-position: 50% 50%;
+    background-repeat: repeat;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 50px;
+
+}
+.h2{
+    background-image: url(mem.jpg);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+
+
+}
+.h2{
+    position: absolute;
+    bottom: -334%;
+    right: 10%;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    -ms-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    background-size: cover;
+    white-space: nowrap;
+    background-position: 50% 50%;
+    background-repeat: repeat;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 50px;
+
+}
+.h3{
+    background-image: url(mem.jpg);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+
+
+}
+.h3{
+    position: absolute;
+    bottom: -610%;
+    right: 12%;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    -ms-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    background-size: cover;
+    white-space: nowrap;
+    background-position: 50% 50%;
+    background-repeat: repeat;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 50px;
+
+}
+.h4{
+    background-image: url(mem.jpg);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+
+
+}
+.h4{
+    position: absolute;
+    bottom: -888%;
+    right: -32%;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    -ms-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    background-size: cover;
+    white-space: nowrap;
+    background-position: 50% 50%;
+    background-repeat: repeat;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 50px;
+
+}
+.h5{
+    background-image: url(mem.jpg);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+
+
+}
+.h5{
+    position: absolute;
+    bottom: -1165%;
+    right: -13%;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    -ms-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    background-size: cover;
+    white-space: nowrap;
+    background-position: 50% 50%;
+    background-repeat: repeat;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 50px;
+
+}
+.h6{
+    background-image: url(mem.jpg);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+
+
+}
+.h6{
+    position: absolute;
+    bottom: -1417%;
+    right: -2%;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    -ms-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    background-size: cover;
+    white-space: nowrap;
+    background-position: 50% 50%;
+    background-repeat: repeat;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 50px;
+
+}
+.h7{
+    background-image: url(mem.jpg);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+
+
+}
+.h7{
+    position: absolute;
+    bottom: -1674%;
+    right: -1%;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    -ms-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    background-size: cover;
+    white-space: nowrap;
+    background-position: 50% 50%;
+    background-repeat: repeat;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 50px;
+
+}
+.h8{
+    background-image: url(mem.jpg);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+
+
+}
+.h8{
+    position: absolute;
+    bottom: -1930%;
+    right: 7%;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    -ms-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    background-size: cover;
+    white-space: nowrap;
+    background-position: 50% 50%;
+    background-repeat: repeat;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 50px;
+
+}
+.h9{
+    background-image: url(mem.jpg);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+
+
+}
+.h9{
+    position: absolute;
+    bottom: -2202%;
+    right: 2%;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    -ms-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    background-size: cover;
+    white-space: nowrap;
+    background-position: 50% 50%;
+    background-repeat: repeat;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 50px;
+
+}
+.h10{
+    background-image: url(mem.jpg);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+
+
+}
+.h10{
+    position: absolute;
+    bottom: -2450%;
+    right: 7%;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    -ms-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    background-size: cover;
+    white-space: nowrap;
+    background-position: 50% 50%;
+    background-repeat: repeat;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 50px;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

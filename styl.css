@@ -1,0 +1,89 @@
+#table1{
+    background-image: url(covid.jpg);
+    padding: 40px;
+}
+#table2{
+    background-color: black;
+}
+.classtext{
+    font-family: arial;
+    padding: 1%;
+    
+    
+    color: white;
+
+}
+
+#left{
+    float: left;
+    width: 30%;
+  
+    background: aqua;
+
+}
+#right{
+    float: right;
+    width: 30%;
+    
+    background: chartreuse;
+
+}
+
+.text{
+    margin: 20px;
+    font-family: arial;
+    color: black;
+}
+#imageleft{
+    float: left;
+    width: 60%;
+    height: 650px;
+    background-image: url(doctor1.jpg);
+
+}
+#imageright{
+    float: right;
+    width: 60%;
+    height: 650px;
+    background-image: url(doctor2.jpg);
+
+}
+#background{
+    
+    background-color: black;
+    padding: 10px;
+
+}
+#back{
+    
+    background-color: black;
+    
+
+}
+.ttxt{
+    color: green;
+    
+    font-family: arial;
+    text-align: center;
+}
+img{
+    float: right;
+    margin: 0 0 10px 10px;
+}
+#id2{
+    background-color: black;
+}
+.ttxt2{
+    color: red;
+    
+    font-family: arial;
+    text-align: center;
+}
+img{
+    float: right;
+    margin: 0 0 10px 10px;
+    
+}
+#id2{
+    background-color: black;
+}
